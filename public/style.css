@@ -1,0 +1,176 @@
+/* --- Tema Butter Yellow & Book Nuance --- */
+:root {
+    --butter-bg: #FFFDF9;
+    --butter-card: #FFFFFF;
+    --butter-primary: #FEF08A; /* Kuning mentega lembut */
+    --butter-primary-hover: #FDE047;
+    --butter-light: #FEFCE8;
+    --butter-border: #FEE68A;
+    --text-espresso: #292524;
+    --text-muted: #78716C;
+    --accent-gold: #B45309;
+    --accent-brown: #44403C;
+    --danger-bg: #FEE2E2;
+    --danger-text: #DC2626;
+}
+
+body {
+    font-family: 'Merriweather', 'Georgia', 'Segoe UI', serif;
+    background-color: var(--butter-bg);
+    color: var(--text-espresso);
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    background: var(--butter-card);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(180, 83, 9, 0.08), 0 8px 10px -6px rgba(180, 83, 9, 0.08);
+    border: 1px solid var(--butter-border);
+}
+
+/* --- Header & Typography --- */
+h2 {
+    color: var(--accent-gold);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--butter-light);
+    padding-bottom: 12px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* --- Links & Buttons --- */
+a {
+    color: var(--accent-gold);
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Segoe UI', sans-serif;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #92400E;
+    text-decoration: underline;
+}
+
+.btn, button, input[type="submit"] {
+    background-color: var(--butter-primary);
+    color: #78350F;
+    border: 1px solid #FCD34D;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: 'Segoe UI', sans-serif;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn:hover, button:hover, input[type="submit"]:hover {
+    background-color: var(--butter-primary-hover);
+    box-shadow: 0 4px 6px -1px rgba(252, 211, 77, 0.3);
+}
+
+/* Tombol Hapus / Danger */
+form button[type="submit"]:not(.btn) {
+    background-color: var(--danger-bg);
+    color: var(--danger-text);
+    border: 1px solid #FCA5A5;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+}
+
+form button[type="submit"]:not(.btn):hover {
+    background-color: #EF4444;
+    color: #FFFFFF;
+}
+
+/* --- Table Styling (Untuk views/buku/index.php) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+    background-color: var(--butter-card);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--butter-border);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+th, td {
+    padding: 14px 18px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--butter-light);
+    color: #78350F;
+    font-weight: 700;
+    border-bottom: 2px solid var(--butter-border);
+    font-size: 0.95rem;
+}
+
+tr:nth-child(even) {
+    background-color: #FFFEFA;
+}
+
+tr:hover {
+    background-color: #FEFCE8;
+}
+
+td {
+    border-bottom: 1px solid #F5F5F4;
+    color: var(--text-espresso);
+    font-size: 0.95rem;
+}
+
+/* --- Form Styling (Untuk views/buku/create.php & edit.php) --- */
+form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #78350F;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 20px;
+    border: 1px solid var(--butter-border);
+    border-radius: 6px;
+    background-color: #FFFEFA;
+    font-size: 1rem;
+    font-family: 'Segoe UI', sans-serif;
+    box-sizing: border-box;
+    color: var(--text-espresso);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #F59E0B;
+    box-shadow: 0 0 0 3px rgba(254, 240, 138, 0.5);
+    background-color: #FFFFFF;
+}
